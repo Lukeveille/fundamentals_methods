@@ -1,5 +1,7 @@
 def wrap_text(text, wrap)
-    return "#{wrap}#{text}#{wrap.reverse}"
+    return "#{wrap}#{text}#{wrap}"
 end
 
-puts wrap_text('new message', '---===###')
+first = wrap_text('new message', '###')
+second = wrap_text(first, '===')
+puts wrap_text(second, "---")
